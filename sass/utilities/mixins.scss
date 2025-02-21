@@ -272,19 +272,19 @@
 }
 
 @mixin until($device) {
-  @media screen and (max-width: ($device - 0.01px)) {
+  @media screen and (max-width: ($device - 0.1px)) {
     @content;
   }
 }
 
 @mixin between($from, $until) {
-  @media screen and (min-width: $from) and (max-width: ($until - 0.01px)) {
+  @media screen and (min-width: $from) and (max-width: ($until - 0.1px)) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media screen and (max-width: (iv.$tablet - 0.01px)) {
+  @media screen and (max-width: (iv.$tablet - 0.1px)) {
     @content;
   }
 }
@@ -296,13 +296,13 @@
 }
 
 @mixin tablet-only {
-  @media screen and (min-width: iv.$tablet) and (max-width: (iv.$desktop - 0.01px)) {
+  @media screen and (min-width: iv.$tablet) and (max-width: (iv.$desktop - 0.1px)) {
     @content;
   }
 }
 
 @mixin touch {
-  @media screen and (max-width: (iv.$desktop - 0.01px)) {
+  @media screen and (max-width: (iv.$desktop - 0.1px)) {
     @content;
   }
 }
@@ -315,7 +315,7 @@
 
 @mixin desktop-only {
   @if iv.$widescreen-enabled {
-    @media screen and (min-width: iv.$desktop) and (max-width: (iv.$widescreen - 0.01px)) {
+    @media screen and (min-width: iv.$desktop) and (max-width: (iv.$widescreen - 0.1px)) {
       @content;
     }
   }
@@ -323,7 +323,7 @@
 
 @mixin until-widescreen {
   @if iv.$widescreen-enabled {
-    @media screen and (max-width: (iv.$widescreen - 0.01px)) {
+    @media screen and (max-width: (iv.$widescreen - 0.1px)) {
       @content;
     }
   }
@@ -339,7 +339,7 @@
 
 @mixin widescreen-only {
   @if iv.$widescreen-enabled and iv.$fullhd-enabled {
-    @media screen and (min-width: iv.$widescreen) and (max-width: (iv.$fullhd - 0.01px)) {
+    @media screen and (min-width: iv.$widescreen) and (max-width: (iv.$fullhd - 0.1px)) {
       @content;
     }
   }
@@ -347,7 +347,7 @@
 
 @mixin until-fullhd {
   @if iv.$fullhd-enabled {
-    @media screen and (max-width: (iv.$fullhd - 0.01px)) {
+    @media screen and (max-width: (iv.$fullhd - 0.1px)) {
       @content;
     }
   }
@@ -391,7 +391,7 @@
 }
 
 @mixin container-until($name, $width) {
-  @container #{$name} (max-width: #{$width - 0.01px}) {
+  @container #{$name} (max-width: #{$width - 0.1px}) {
     @content;
   }
 }
